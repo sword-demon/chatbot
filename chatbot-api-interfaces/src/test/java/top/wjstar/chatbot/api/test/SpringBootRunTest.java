@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import top.wjstar.chatbot.api.domain.ai.IOpenAI;
 import top.wjstar.chatbot.api.domain.zsxq.IZsxqApi;
 import top.wjstar.chatbot.api.domain.zsxq.model.aggregates.UnAnsweredQuestionsAggregates;
 import top.wjstar.chatbot.api.domain.zsxq.model.vo.Topics;
@@ -30,6 +31,9 @@ public class SpringBootRunTest {
     @Resource
     private IZsxqApi zsxqApi;
 
+    @Resource
+    private IOpenAI iOpenAI;
+
     @Test
     public void test_zsxq_api() throws IOException {
         UnAnsweredQuestionsAggregates unAnsweredQuestionsAggregates = zsxqApi.queryUnAnsweredQuestionsTopicId(groupId, cookie);
@@ -41,5 +45,11 @@ public class SpringBootRunTest {
             String text = topic.getQuestion().getText();
             logger.info("topicId: {}, text: {}", topicId, text);
         }
+    }
+
+    @Test
+    public void test_openai() throws IOException {
+        String res = iOpenAI.doChatGPT("使用 Java 写一个冒泡排序");
+        logger.info("测试结果: {}", res);
     }
 }
