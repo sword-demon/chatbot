@@ -1,2 +1,7 @@
 server:
   port: 8090
+
+chatbot-api:
+  groupId: 知识星球的 group
+  cookie: 网页版知识星球的 cookie
+  openAiKey: xxxx
