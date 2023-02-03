@@ -1,2 +1,6 @@
 server:
   port: 8090
+
+chatbot-api:
+  groupId: 28885518425541
+  cookie: zsxq_access_token=693207AD-818F-DD8E-5C1D-F891FA62E112_6BC33A43033F21F6; zsxqsessionid=0af77eef64919e360bffe7e417af17a7; sensorsdata2015jssdkcross={"distinct_id":"185ee56e6e210fe-001b1c29dbe66f64-16525635-1296000-185ee56e6e317f5","first_id":"","props":{"$latest_traffic_source_type":"引荐流量","$latest_search_keyword":"未取到值","$latest_referrer":"https://bugstack.cn/"},"identities":"eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTg1ZWU1NmU2ZTIxMGZlLTAwMWIxYzI5ZGJlNjZmNjQtMTY1MjU2MzUtMTI5NjAwMC0xODVlZTU2ZTZlMzE3ZjUifQ==","history_login_id":{"name":"","value":""},"$device_id":"185ee56e6e210fe-001b1c29dbe66f64-16525635-1296000-185ee56e6e317f5"}; UM_distinctid=1860318a43bd49-07bf4455035f6f-16525635-1fa400-1860318a43c13fd; abtest_env=product
