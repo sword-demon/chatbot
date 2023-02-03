@@ -7,5 +7,12 @@ import java.io.IOException;
  */
 public interface IOpenAI {
 
+    /**
+     * 调用 chatGPT 接口
+     *
+     * @param question 问题描述
+     * @return String
+     * @throws IOException
+     */
     String doChatGPT(String question) throws IOException;
 }
