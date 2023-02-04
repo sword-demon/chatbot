@@ -1,7 +1,23 @@
 server:
   port: 8090
 
+#chatbot-api:
+#  groupId: 知识星球的 group
+#  cookie: 网页版知识星球的 cookie
+#  openAiKey: xxxx
+
+# 分组任务配置
 chatbot-api:
-  groupId: 知识星球的 group
-  cookie: 网页版知识星球的 cookie
-  openAiKey: xxxx
+  launchList: group01, group02 # 启动几组
+  group01:
+    groupName: xxx问答助手
+    groupId: xxxx # 知识星球 ID
+    cookie: xxx # 知识星球个人 cookie
+    openAiKey: xxx # openai 的 key
+    cronExpression: 0/30 * * * * ? # 执行频次配置
+  group02:
+    groupName: xxx问答助手2
+    groupId: xxxx # 知识星球 ID
+    cookie: xxx # 知识星球个人 cookie
+    openAiKey: xxx # openai 的 key
+    cronExpression: 0/30 * * * * ? # 执行频次配置
